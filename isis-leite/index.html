@@ -45,7 +45,9 @@ section{padding:90px 0}
 .tbl td:not(:first-child),.tbl th:not(:first-child){text-align:center}
 .tbl tbody tr:nth-child(even){background:#faf8f4}
 .tbl .y{color:var(--cobre);font-weight:700}.tbl .n{color:#b3b9c0}
-.tblwrap{overflow-x:auto}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.swipe{display:none;font-size:13px;color:var(--muted);margin-bottom:10px}
+@media(max-width:700px){.tbl{min-width:560px;font-size:14px}.tbl th,.tbl td{padding:12px}.swipe{display:block}}
 .note{font-size:14px;color:var(--muted);margin-top:12px}
 .deps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .d{border:1px solid var(--line);border-radius:12px;padding:26px}
@@ -91,7 +93,7 @@ footer{text-align:center;padding:28px 0;font-size:13px;color:var(--muted)}footer
 
 <section id="pacotes" style="background:#fbfaf7"><div class="wrap">
 <div class="head"><span class="over">Pacotes</span><h2>O que cada tipo de assessoria inclui</h2><p>Para vocês saberem exatamente o que esperar, antes de contratar.</p></div>
-<div class="tblwrap"><table class="tbl">
+<p class="swipe">Deslize a tabela para o lado →</p><div class="tblwrap"><table class="tbl">
 <thead><tr><th>O que está incluso</th><th>Assessoria completa</th><th>Assessoria parcial</th><th>Cerimonial do dia</th></tr></thead>
 <tbody>
 <tr><td>Reuniões de planejamento</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td></tr>

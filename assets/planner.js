@@ -92,7 +92,9 @@
         const msg = `${cfg.saudacao || 'Olá!'} Fiz o planejamento pelo site da ${cfg.empresa}:\n` + linhas.map(([a, b]) => `• ${a}: ${b}`).join('\n') + `\n\nPodem me ajudar?`;
         const acao = cfg.whatsapp
           ? `<a class="pl-btn" target="_blank" rel="noopener" href="https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(msg)}">${esc(cfg.cta || 'Enviar para o WhatsApp')}</a>`
-          : `<button class="pl-btn" data-copy>${esc(cfg.cta || 'Copiar briefing')}</button><a class="pl-btn" style="background:none;color:var(--a);border:1.5px solid var(--a)" href="tel:+55${(cfg.telefone || '').replace(/\D/g, '')}">Ligar ${esc(cfg.telefone || '')}</a>`;
+          : `<button class="pl-btn" data-copy>${esc(cfg.cta || 'Copiar briefing')}</button>` + (cfg.alt
+            ? `<a class="pl-btn" style="background:none;color:var(--a);border:1.5px solid var(--a)" target="_blank" rel="noopener" href="${esc(cfg.alt.href)}">${esc(cfg.alt.label)}</a>`
+            : cfg.telefone ? `<a class="pl-btn" style="background:none;color:var(--a);border:1.5px solid var(--a)" href="tel:+55${cfg.telefone.replace(/\D/g, '')}">Ligar ${esc(cfg.telefone)}</a>` : '');
         el.innerHTML = `<div class="pl-bar"><i style="width:100%"></i></div><div class="pl-res"><div class="pl-step">Seu resumo</div><h3>${esc(cfg.tituloResultado || 'Aqui está o seu ponto de partida')}</h3>
           <div class="pl-rec">${esc(rec)}</div><div class="pl-sum">${linhas.map(([a, b]) => `<div><b>${esc(a)}</b>${esc(b)}</div>`).join('')}</div>${tl}
           <div class="pl-act">${acao}<button class="pl-back" data-restart>Refazer</button></div>

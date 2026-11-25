@@ -16,7 +16,7 @@ h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-hei
 em{font-style:italic}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 .orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--sage2);font-size:12px;letter-spacing:.32em;text-transform:uppercase}
-.orn:before,.orn:after{content:"";width:46px;height:1px;background:var(--sage)}
+.orn:before,.orn:after{content:"";width:46px;height:1px;background:var(--sage);flex:none}@media(max-width:600px){.orn{font-size:11px;letter-spacing:.22em;text-align:center;gap:10px}.orn:before,.orn:after{width:22px}}
 .btn{display:inline-block;background:var(--brown);color:#fff;text-decoration:none;padding:15px 32px;border-radius:40px;font-weight:400;letter-spacing:.06em;font-size:15px;transition:.3s}
 .btn:hover{background:var(--sage2)}
 header{text-align:center;padding:28px 0 0}
@@ -25,9 +25,9 @@ header{text-align:center;padding:28px 0 0}
 header nav{margin-top:16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 header nav a{display:inline-block;padding:12px 18px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
 header nav a:hover{color:var(--brown)}
-@media(max-width:700px){header nav a{padding:10px 8px;font-size:11px;letter-spacing:.08em}}
+@media(max-width:700px){header nav{display:flex;overflow-x:auto;white-space:nowrap;scrollbar-width:none;justify-content:flex-start;padding:0 8px}header nav::-webkit-scrollbar{display:none}header nav a{padding:12px 12px;font-size:11px;letter-spacing:.14em;flex:none}}
 .hero{padding:70px 0 90px;text-align:center}
-.arch{width:min(440px,82vw);aspect-ratio:3/4;margin:0 auto 46px;border-radius:999px 999px 0 0;overflow:hidden;box-shadow:0 0 0 10px var(--off),0 0 0 11px var(--rose)}
+.arch{width:min(440px,64vw);aspect-ratio:3/4;margin:0 auto 46px;border-radius:999px 999px 0 0;overflow:hidden;box-shadow:0 0 0 10px var(--off),0 0 0 11px var(--rose)}
 .arch img{width:100%;height:100%;object-fit:cover}
 .hero h1{font-size:clamp(40px,6vw,74px);max-width:860px;margin:18px auto 18px}
 .hero h1 em{color:var(--rose2)}
@@ -39,7 +39,7 @@ section{padding:100px 0}
 .sugrid h2{font-size:clamp(36px,4.6vw,54px);margin:14px 0 22px}
 .sugrid p{margin-bottom:16px;color:var(--muted)}
 .sign{font:italic 30px "Cormorant Garamond",serif;color:var(--rose2);margin-top:10px}
-@media(max-width:860px){.sugrid{grid-template-columns:1fr;gap:40px}section{padding:76px 0}}
+@media(max-width:860px){.sugrid{grid-template-columns:1fr;gap:40px}section{padding:64px 0}.hero{padding:40px 0 64px}.arch{margin-bottom:30px}}
 .journey h2{font-size:clamp(34px,4.4vw,52px);text-align:center;margin:14px 0 60px}
 .line{position:relative;max-width:760px;margin:0 auto}
 .line:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--rose)}
@@ -74,6 +74,7 @@ section{padding:100px 0}
 footer{text-align:center;padding:30px 0;font-size:13px;color:var(--muted)}footer .demo{opacity:.75;font-size:11.5px;margin-top:6px}
 .wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.2);z-index:30}.wa svg{width:30px;fill:#fff}
 .fade{opacity:0;transform:translateY(16px);transition:1s}.fade.on{opacity:1;transform:none}
+@media(max-width:600px){.wa{width:52px;height:52px;right:14px;bottom:14px}.wa svg{width:26px}}
 </style>
 </head>
 <body>
@@ -82,7 +83,7 @@ footer{text-align:center;padding:30px 0;font-size:13px;color:var(--muted)}footer
 
 <section class="hero"><div class="wrap">
 <div class="arch"><img src="img/foto2.jpg" alt="Sulamita com os noivos no altar"></div>
-<div class="orn">Assessoria &amp; cerimonial de casamentos</div>
+<div class="orn">Assessoria &amp; cerimonial</div>
 <h1>Leveza para decidir, <em>serenidade</em> para viver o grande dia</h1>
 <p>Sulamita e equipe acompanham cada etapa do seu casamento com cuidado, atenção e muito carinho.</p>
 <a class="btn" href="https://wa.me/5585996170304?text=Ol%C3%A1%20Su!%20Gostaria%20de%20agendar%20nosso%20primeiro%20encontro." target="_blank" rel="noopener">Agendar meu primeiro encontro com a Su</a>
@@ -109,7 +110,7 @@ footer{text-align:center;padding:30px 0;font-size:13px;color:var(--muted)}footer
 </div></div></section>
 
 <section id="servicos" class="serv"><div class="wrap">
-<div class="orn">Como cuidamos de vocês</div>
+<div class="orn">Como cuidamos</div>
 <h2>Serviços</h2>
 <div class="sgrid">
 <div><h3>Assessoria completa</h3><p>Ao lado dos noivos em todas as escolhas.</p></div>
@@ -121,7 +122,7 @@ footer{text-align:center;padding:30px 0;font-size:13px;color:var(--muted)}footer
 <div class="proof"><b>5,0</b><p>NOTA NO GOOGLE · 52 AVALIAÇÕES</p></div>
 
 <section id="planejar"  style=""><div class="wrap">
-<div style="text-align:center;max-width:680px;margin:0 auto 40px"><div class="orn">Um primeiro passo com calma</div><h2 style="font-size:clamp(32px,4vw,48px);margin:12px 0 12px">Por onde começar? A Su ajuda</h2><p style="opacity:.8">Algumas perguntas leves para entender o momento de vocês. No final, um cronograma sugerido e a mensagem pronta para a Su.</p></div>
+<div style="text-align:center;max-width:680px;margin:0 auto 40px"><div class="orn">Primeiro passo</div><h2 style="font-size:clamp(32px,4vw,48px);margin:12px 0 12px">Por onde começar? A Su ajuda</h2><p style="opacity:.8">Algumas perguntas leves para entender o momento de vocês. No final, um cronograma sugerido e a mensagem pronta para a Su.</p></div>
 <div id="planner"></div></div></section>
 <script src="../assets/planner.js"></script><script>Planner.mount('#planner',Object.assign({"empresa": "Sutileza Cerimonial", "whatsapp": "5585996170304", "saudacao": "Olá, Su!", "cta": "Enviar para a Su no WhatsApp", "tituloResultado": "Respira: dá para fazer tudo com leveza", "theme": {"accent": "#9AAE94", "ink": "#5b4a42", "bg": "#FBF7F4", "card": "#fff", "line": "#eadfd8", "muted": "#8a7a72", "onAccent": "#fff", "fontH": "\"Cormorant Garamond\",serif"}, "steps": [{"id": "sent", "q": "Como vocês estão se sentindo com o planejamento?", "type": "choice", "options": ["Tranquilos, só começando", "Um pouco perdidos com tantas escolhas", "Ansiosos, com muita coisa para decidir"], "resumo": "Como estão"}, {"id": "data", "q": "Já têm a data?", "type": "date", "resumo": "Data"}, {"id": "cer", "q": "Como imaginam a cerimônia?", "type": "choice", "options": ["Religiosa na igreja", "Celebração no local da festa", "Civil e festa intimista", "Ainda sonhando"], "resumo": "Cerimônia"}, {"id": "conv", "q": "Quantos convidados?", "type": "choice", "options": ["Até 80", "80 a 150", "150 a 250", "Mais de 250"], "resumo": "Convidados"}, {"id": "ajuda", "q": "Em que mais precisam de apoio?", "hint": "Pode marcar mais de uma.", "type": "multi", "options": ["Escolher e negociar fornecedores", "Organizar o cronograma", "Cuidar de padrinhos e crianças no dia", "Ter alguém de confiança do início ao fim"], "resumo": "Apoio"}]}));</script>
 <section id="depoimentos" class="dep"><div class="wrap">

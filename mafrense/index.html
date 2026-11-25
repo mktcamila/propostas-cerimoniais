@@ -15,7 +15,7 @@ img{display:block;max-width:100%}a{color:inherit}
 h1,h2,h3{font-family:"Libre Baskerville",Georgia,serif;line-height:1.2;font-weight:700}
 .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
 .top{background:var(--blue2);color:#c9d3e3;font-size:14px}
-.top .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 24px;flex-wrap:wrap}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 24px;flex-wrap:wrap}@media(max-width:640px){.top .wrap span:last-child{display:none}}
 .top a{text-decoration:none;color:#fff;font-weight:600}
 header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
 header .wrap{display:flex;justify-content:space-between;align-items:center;height:74px}
@@ -39,7 +39,7 @@ header nav a:hover{color:var(--blue)}
 .hero figure{border:6px solid rgba(255,255,255,.08)}
 .hero figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .hero figcaption{font-size:13px;color:#9fb0c9;padding-top:8px}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:52px;padding-bottom:56px}.hero figure{display:none}.hero ul{gap:10px 20px}}
 section{padding:90px 0}
 .title{text-align:center;max-width:700px;margin:0 auto 50px}
 .title small{display:block;font-weight:700;letter-spacing:.2em;font-size:12px;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
@@ -71,13 +71,14 @@ details p{color:var(--muted);margin-top:12px}
 @media(max-width:700px){.deps{grid-template-columns:1fr}}
 .channels{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .ch{display:grid;gap:14px}
-.ch a,.ch div{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:6px;padding:18px 20px;text-decoration:none}
+.ch>a,.ch>div{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:6px;padding:18px 20px;text-decoration:none;background:#fff}.ch>a>div,.ch>div>div{display:block}
 .ch b{color:var(--blue);display:block}.ch span{color:var(--muted);font-size:15px}
 .ch i{font-style:normal;width:44px;height:44px;border-radius:50%;background:var(--gray);display:grid;place-items:center;font-size:20px;flex:none}
 .channels iframe{width:100%;height:380px;border:0;border-radius:6px}
-@media(max-width:860px){.channels{grid-template-columns:1fr}}
+@media(max-width:860px){.channels{grid-template-columns:1fr}}@media(max-width:600px){section{padding:64px 0}.hero h1{font-size:32px}.st{padding:20px 18px}}
 footer{background:var(--blue2);color:#9fb0c9;text-align:center;padding:30px 0;font-size:13px}footer .demo{opacity:.75;font-size:11.5px;margin-top:6px}
 .wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:30}.wa svg{width:30px;fill:#fff}
+@media(max-width:600px){.wa{width:52px;height:52px;right:14px;bottom:14px}.wa svg{width:26px}}
 </style>
 </head>
 <body>
@@ -113,18 +114,18 @@ footer{background:var(--blue2);color:#9fb0c9;text-align:center;padding:30px 0;fo
 <div class="st"><h3>Evento</h3><p>Nossa equipe conduz tudo no dia.</p></div>
 </div></div></section>
 
-<section id="planejar" class="how" style=""><div class="wrap">
+<section id="planejar" style=""><div class="wrap">
 <div style="text-align:center;max-width:680px;margin:0 auto 40px"><div class="title" style="margin:0"><small>Orçamento guiado</small></div><h2 style="font-size:clamp(32px,4vw,48px);margin:12px 0 12px">Monte seu pedido de orçamento em 1 minuto</h2><p style="opacity:.8">Diga o que precisa e receba a proposta com todas as condições por escrito.</p></div>
 <div id="planner"></div></div></section>
 <script src="../assets/planner.js"></script><script>Planner.mount('#planner',Object.assign({"empresa": "Mafrense", "whatsapp": "5585991190128", "saudacao": "Olá, Mafrense!", "cta": "Pedir orçamento por escrito", "tituloResultado": "Seu pedido está pronto", "theme": {"accent": "#1D3557", "ink": "#1b2433", "bg": "#F2F4F7", "card": "#fff", "line": "#dde2ea", "muted": "#5a6475", "onAccent": "#fff", "fontH": "\"Libre Baskerville\",serif"}, "steps": [{"id": "tipo", "q": "Qual é o evento?", "type": "choice", "options": ["Formatura", "Festa de 15 anos", "Casamento", "Outro evento"], "resumo": "Evento"}, {"id": "data", "q": "Qual a data (ou previsão)?", "type": "date", "noDate": "Ainda sem data", "resumo": "Data"}, {"id": "conv", "q": "Quantas pessoas, mais ou menos?", "hint": "Para formaturas, conte formandos e convidados.", "type": "choice", "options": ["Até 100", "100 a 300", "300 a 600", "Mais de 600"], "resumo": "Pessoas"}, {"id": "prec", "q": "Do que você precisa?", "hint": "Pode marcar mais de uma.", "type": "multi", "options": ["Cerimônia", "Festa", "Placas de formatura", "Locação de itens", "Organização completa"], "resumo": "Precisa de"}, {"id": "rec", "q": "Como prefere receber a proposta por escrito?", "type": "choice", "options": ["WhatsApp", "E-mail", "Em reunião na sede"], "resumo": "Receber proposta por"}]},{marcos:[{m:12,t:"Reservar a data e assinar o contrato"},{m:8,t:"Definir pacote, decoração e atrações"},{m:4,t:"Conferir nomes e textos (placas e convites)"},{m:2,t:"Lista final de convidados e pagamentos"},{m:1,t:"Reunião final com o responsável pelo evento"}]}));</script>
 <section id="duvidas"><div class="wrap">
 <div class="title"><small>Perguntas frequentes</small><h2>Antes de fechar, tire suas dúvidas</h2></div>
 <div class="faq">
-<details open><summary>O que o contrato inclui?</summary><p>Cada contrato lista, item por item, os serviços, os fornecedores e os prazos combinados. [Texto a preencher com a Mafrense.]</p></details>
-<details><summary>Quais são as formas de pagamento?</summary><p>[A preencher com a Mafrense: entrada, parcelas e meios aceitos.]</p></details>
-<details><summary>Qual o prazo das placas de formatura?</summary><p>[A preencher com a Mafrense: prazo de produção e conferência dos nomes antes da gravação.]</p></details>
-<details><summary>Quem será meu contato no dia do evento?</summary><p>[A preencher com a Mafrense: nome do responsável e canal direto.]</p></details>
-<details><summary>Qual o horário de atendimento?</summary><p>[A preencher com a Mafrense.] Fora do horário, deixe sua mensagem no WhatsApp.</p></details>
+<details open><summary>O que o contrato inclui?</summary><p>Na proposta por escrito você recebe a lista de tudo o que está incluído, com valores e prazos. Antes da assinatura, nossa equipe repassa o contrato com você, cláusula por cláusula.</p></details>
+<details><summary>Quais são as formas de pagamento?</summary><p>As condições de pagamento vêm descritas na proposta. Para conhecer as opções disponíveis para o seu evento, fale com a equipe pelo WhatsApp.</p></details>
+<details><summary>Qual o prazo das placas de formatura?</summary><p>O prazo de entrega fica registrado no contrato. Antes da produção, a comissão confere e aprova os nomes e textos de cada placa.</p></details>
+<details><summary>Quem será meu contato no dia do evento?</summary><p>Cada evento tem um responsável da nossa equipe, com contato direto, do planejamento até o dia da festa.</p></details>
+<details><summary>Qual o horário de atendimento?</summary><p>Atendemos pelo WhatsApp (85) 99119-0128 e na nossa sede no Guararapes. Fora do horário comercial, deixe sua mensagem que retornamos.</p></details>
 </div></div></section>
 
 <section id="espaco" class="space"><div class="wrap">

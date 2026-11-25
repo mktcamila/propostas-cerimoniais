@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mafrense | Cerimonial e Assessoria de Casamentos em Fortaleza</title>
+<meta name="description" content="Mafrense: cerimonial e assessoria de casamentos em Fortaleza. Planejamento, organização e cerimonial no grande dia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f4;--paper:#f4ece3;--ink:#3b2f2a;--muted:#7d6b62;--rose:#c9a79a;--gold:#b08d57;--line:#e6d9cc}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 17px/1.7 Jost,system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.15}
+h2{font-size:clamp(34px,5vw,52px);margin-bottom:18px}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;padding:15px 30px;border-radius:999px;font-weight:400;letter-spacing:.04em;transition:.25s}
+.btn:hover{background:var(--gold)}
+.btn.ghost{background:transparent;border:1px solid currentColor}
+nav{position:fixed;inset:0 0 auto;z-index:20;transition:.3s}
+nav.solid{background:rgba(251,248,244,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:600;text-decoration:none;color:#fff}
+nav.solid .logo,nav.solid .links a{color:var(--ink)}
+.links{display:flex;gap:28px}.links a{color:#fff;text-decoration:none;font-size:14px;letter-spacing:.08em}
+@media(max-width:760px){.links{display:none}}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;color:#fff;position:relative;background:#2c221e url('img/foto1.jpg') center/cover}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,20,16,.45),rgba(30,20,16,.6))}
+.hero .wrap{position:relative;max-width:820px}
+.hero h1{font-size:clamp(44px,7.5vw,88px);margin:6px 0 20px}
+.hero h1 em{color:#f1d9c4}
+.hero p{font-size:19px;opacity:.92;margin-bottom:34px}
+.hero .eyebrow{color:#f1d9c4}
+.hero .btn{background:#fff;color:var(--ink)}.hero .btn:hover{background:var(--gold);color:#fff}
+.badge{margin-top:26px;font-size:15px;opacity:.95}.badge strong{font-weight:500}
+section{padding:110px 0}
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about img{border-radius:220px 220px 14px 14px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.about p{color:var(--muted);margin-bottom:16px}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:40px}section{padding:80px 0}}
+.services{background:var(--paper)}
+.center{text-align:center;max-width:640px;margin:0 auto 56px}
+.center p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:34px 28px}
+.card .n{font-family:"Cormorant Garamond",serif;color:var(--gold);font-size:30px}
+.card h3{font-size:26px;margin:6px 0 10px}.card p{color:var(--muted);font-size:15.5px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery img{aspect-ratio:3/4;object-fit:cover;border-radius:10px;width:100%}
+.gallery img:nth-child(odd){margin-top:36px}
+@media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.depos{background:var(--ink);color:#f6eee7}
+.depos .center p{color:#cbb9ad}
+.depo{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:32px}
+.stars{color:#e3c08d;letter-spacing:4px;margin-bottom:12px}
+blockquote{font-family:"Cormorant Garamond",serif;font-size:21px;font-style:italic;line-height:1.5}
+figcaption{margin-top:16px;font-size:14px;color:#cbb9ad;letter-spacing:.05em}
+.score{font-family:"Cormorant Garamond",serif;font-size:64px;color:#e3c08d;line-height:1}
+.steps{counter-reset:s}.step{border-top:1px solid var(--line);padding-top:26px}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-size:44px;color:var(--rose)}
+.step h3{font-size:26px;margin:4px 0 8px}.step p{color:var(--muted)}
+.contact{background:var(--paper)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.cgrid iframe{width:100%;height:380px;border:0;border-radius:14px}
+.info p{margin-bottom:10px;color:var(--muted)}.info strong{color:var(--ink);font-weight:500}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}}
+footer{padding:40px 0;text-align:center;font-size:13px;color:var(--muted)}
+footer .logo{color:var(--ink);display:block;margin-bottom:8px}
+.demo{font-size:11.5px;opacity:.75;margin-top:10px}
+.float{position:fixed;right:20px;bottom:20px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.2);transition:.2s}
+.float:hover{transform:scale(1.07)}
+.float svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap"><a class="logo" href="#">Mafrense</a><div class="links"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#galeria">Galeria</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<span class="eyebrow">Cerimonial &amp; Assessoria de Casamentos · Fortaleza</span>
+<h1>O dia dos seus sonhos, <em>vivido sem preocupação</em></h1>
+<p>Cuidamos de cada detalhe, do planejamento ao último brinde, para que vocês só se preocupem em viver esse momento.</p>
+<a class="btn" href="https://wa.me/5585991190128" target="_blank" rel="noopener">Fale conosco no WhatsApp</a>
+<div class="badge">★★★★★ &nbsp;<strong>4,1</strong> no Google · 181 avaliações</div>
+</div></header>
+
+<section id="sobre"><div class="wrap about">
+<img src="img/foto2.jpg" alt="Casamento organizado por Mafrense">
+<div>
+<span class="eyebrow">Sobre nós</span>
+<h2>Cuidado, organização e carinho em cada detalhe</h2>
+<p>A Mafrense acompanha casais e famílias em Fortaleza na realização de casamentos, bodas, 15 anos e eventos sociais, com uma equipe experiente, atenciosa e apaixonada pelo que faz.</p>
+<p>Do primeiro encontro ao grande dia, organizamos o cronograma, conduzimos os fornecedores e coordenamos a cerimônia para que tudo aconteça exatamente como vocês sonharam.</p>
+<a class="btn ghost" href="https://wa.me/5585991190128" target="_blank" rel="noopener">Agende uma conversa</a>
+</div></div></section>
+
+<section id="servicos" class="services"><div class="wrap">
+<div class="center"><span class="eyebrow">Serviços</span><h2>Como podemos ajudar</h2><p>Soluções sob medida para cada casal e cada momento da jornada até o altar.</p></div>
+<div class="grid">
+<div class="card"><div class="n">01</div><h3>Assessoria completa</h3><p>Acompanhamento desde o início: orçamento, escolha de fornecedores, contratos e reuniões.</p></div>
+<div class="card"><div class="n">02</div><h3>Assessoria do dia</h3><p>Cerimonial no grande dia: coordenação da equipe, horários, entrada e toda a condução do evento.</p></div>
+<div class="card"><div class="n">03</div><h3>Planejamento e cronograma</h3><p>Checklists, linha do tempo e roteiro do evento para nada ficar de fora.</p></div>
+<div class="card"><div class="n">04</div><h3>Fornecedores e ensaio</h3><p>Indicação de parceiros de confiança e ensaio da cerimônia com padrinhos e família.</p></div>
+</div></div></section>
+
+<section id="galeria"><div class="wrap">
+<div class="center"><span class="eyebrow">Galeria</span><h2>Momentos que ajudamos a criar</h2></div>
+<div class="gallery"><img src="img/foto1.jpg" alt="Evento organizado por Mafrense" loading="lazy"><img src="img/foto2.jpg" alt="Evento organizado por Mafrense" loading="lazy"><img src="img/foto3.jpg" alt="Evento organizado por Mafrense" loading="lazy"><img src="img/foto4.jpg" alt="Evento organizado por Mafrense" loading="lazy"></div>
+</div></section>
+
+
+
+<section><div class="wrap">
+<div class="center"><span class="eyebrow">Como funciona</span><h2>Três passos até o “sim”</h2></div>
+<div class="grid steps">
+<div class="step"><h3>Conversa inicial</h3><p>Entendemos o estilo, a data, o número de convidados e o orçamento de vocês.</p></div>
+<div class="step"><h3>Planejamento</h3><p>Montamos o cronograma, indicamos fornecedores e acompanhamos cada decisão.</p></div>
+<div class="step"><h3>O grande dia</h3><p>Nossa equipe coordena tudo nos bastidores enquanto vocês aproveitam cada segundo.</p></div>
+</div></div></section>
+
+<section id="contato" class="contact"><div class="wrap cgrid">
+<div class="info">
+<span class="eyebrow">Contato</span>
+<h2>Vamos conversar sobre o seu casamento?</h2>
+<p><strong>Telefone / WhatsApp:</strong> <a href="tel:+5585991190128">(85) 99119-0128</a></p>
+<p><strong>Endereço:</strong> Rua Olímpio Galdino de Sousa, 445 - Guararapes, Fortaleza - CE, 60810-005</p>
+<p style="margin-top:26px"><a class="btn" href="https://wa.me/5585991190128" target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
+</div>
+<iframe src="https://www.google.com/maps?q=Mafrense+Rua+Olímpio+Galdino+de+Sousa,+445+-+Guararapes,+Fortaleza+-+CE,+60810-005&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe>
+</div></section>
+
+<footer><div class="wrap"><span class="logo">Mafrense</span>Cerimonial e assessoria de casamentos em Fortaleza - CE
+<div class="demo">Proposta de site demonstrativa, não é o site oficial da empresa. Fotos e avaliações públicas do Google.</div></div></footer>
+
+<a class="float" href="https://wa.me/5585991190128" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+<script>const n=document.getElementById('nav');addEventListener('scroll',()=>n.classList.toggle('solid',scrollY>40));</script>
+</body>
+</html>

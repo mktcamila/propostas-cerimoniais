@@ -89,7 +89,7 @@
           prox.forEach(x => itens.push(`<li><small>${x.m} ${x.m === 1 ? 'mês' : 'meses'} antes</small>${esc(x.t)}</li>`));
           tl = `<h4 style="margin:0 0 12px;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--m)">Seu cronograma sugerido</h4><ul class="pl-tl">${itens.join('')}</ul>`;
         }
-        const msg = `${cfg.saudacao || 'Olá!'} Fiz o planejamento pelo site da ${cfg.empresa}:\n` + linhas.map(([a, b]) => `• ${a}: ${b}`).join('\n') + `\n\nPodem me ajudar?`;
+        const msg = `${cfg.saudacao || 'Olá!'} ${cfg.intro || `Fiz o planejamento pelo site da ${cfg.empresa}:`}\n` + linhas.map(([a, b]) => `• ${a}: ${b}`).join('\n') + `\n\n${cfg.fecho || 'Podem me ajudar?'}`;
         const acao = cfg.whatsapp
           ? `<a class="pl-btn" target="_blank" rel="noopener" href="https://wa.me/${cfg.whatsapp}?text=${encodeURIComponent(msg)}">${esc(cfg.cta || 'Enviar para o WhatsApp')}</a>`
           : `<button class="pl-btn" data-copy>${esc(cfg.cta || 'Copiar briefing')}</button>` + (cfg.alt

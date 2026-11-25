@@ -82,7 +82,7 @@ footer{background:var(--blue2);color:#9fb0c9;text-align:center;padding:30px 0;fo
 </head>
 <body>
 <div class="top"><div class="wrap"><span>Atendimento pelo WhatsApp: <a href="https://wa.me/5585991190128">(85) 99119-0128</a></span><span>Rua Olímpio Galdino de Sousa, 445 · Guararapes</span></div></div>
-<header><div class="wrap"><a class="logo" href="#"><span class="m">M</span><b>MAFRENSE</b></a><nav><a href="#servicos">Serviços</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a><a href="#espaco">Nosso espaço</a><a href="#contato">Contato</a></nav></div></header>
+<header><div class="wrap"><a class="logo" href="#"><span class="m">M</span><b>MAFRENSE</b></a><nav><a href="#servicos">Serviços</a><a href="#como-funciona">Como funciona</a><a href="#planejar">Orçamento</a><a href="#duvidas">Dúvidas</a><a href="#espaco">Nosso espaço</a><a href="#contato">Contato</a></nav></div></header>
 
 <section class="hero" style="padding:0"><div class="wrap">
 <div>
@@ -113,6 +113,10 @@ footer{background:var(--blue2);color:#9fb0c9;text-align:center;padding:30px 0;fo
 <div class="st"><h3>Evento</h3><p>Nossa equipe conduz tudo no dia.</p></div>
 </div></div></section>
 
+<section id="planejar" class="how" style=""><div class="wrap">
+<div style="text-align:center;max-width:680px;margin:0 auto 40px"><div class="title" style="margin:0"><small>Orçamento guiado</small></div><h2 style="font-size:clamp(32px,4vw,48px);margin:12px 0 12px">Monte seu pedido de orçamento em 1 minuto</h2><p style="opacity:.8">Diga o que precisa e receba a proposta com todas as condições por escrito.</p></div>
+<div id="planner"></div></div></section>
+<script src="../assets/planner.js"></script><script>Planner.mount('#planner',Object.assign({"empresa": "Mafrense", "whatsapp": "5585991190128", "saudacao": "Olá, Mafrense!", "cta": "Pedir orçamento por escrito", "tituloResultado": "Seu pedido está pronto", "theme": {"accent": "#1D3557", "ink": "#1b2433", "bg": "#F2F4F7", "card": "#fff", "line": "#dde2ea", "muted": "#5a6475", "onAccent": "#fff", "fontH": "\"Libre Baskerville\",serif"}, "steps": [{"id": "tipo", "q": "Qual é o evento?", "type": "choice", "options": ["Formatura", "Festa de 15 anos", "Casamento", "Outro evento"], "resumo": "Evento"}, {"id": "data", "q": "Qual a data (ou previsão)?", "type": "date", "noDate": "Ainda sem data", "resumo": "Data"}, {"id": "conv", "q": "Quantas pessoas, mais ou menos?", "hint": "Para formaturas, conte formandos e convidados.", "type": "choice", "options": ["Até 100", "100 a 300", "300 a 600", "Mais de 600"], "resumo": "Pessoas"}, {"id": "prec", "q": "Do que você precisa?", "hint": "Pode marcar mais de uma.", "type": "multi", "options": ["Cerimônia", "Festa", "Placas de formatura", "Locação de itens", "Organização completa"], "resumo": "Precisa de"}, {"id": "rec", "q": "Como prefere receber a proposta por escrito?", "type": "choice", "options": ["WhatsApp", "E-mail", "Em reunião na sede"], "resumo": "Receber proposta por"}]},{marcos:[{m:12,t:"Reservar a data e assinar o contrato"},{m:8,t:"Definir pacote, decoração e atrações"},{m:4,t:"Conferir nomes e textos (placas e convites)"},{m:2,t:"Lista final de convidados e pagamentos"},{m:1,t:"Reunião final com o responsável pelo evento"}]}));</script>
 <section id="duvidas"><div class="wrap">
 <div class="title"><small>Perguntas frequentes</small><h2>Antes de fechar, tire suas dúvidas</h2></div>
 <div class="faq">

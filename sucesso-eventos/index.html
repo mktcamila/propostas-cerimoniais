@@ -129,23 +129,16 @@ footer{background:var(--pet2);color:#9fbcc0;padding:30px 0;text-align:center;fon
 </div></div></section>
 
 <section id="proposta"><div class="wrap brief">
-<div class="info"><span class="tag">Proposta</span><h2 style="font-size:clamp(30px,3.6vw,42px);margin:10px 0 16px">Conte sobre o seu evento</h2>
-<p>Envie o tipo de evento, a data e o número de pessoas. Nossa equipe retorna com uma proposta.</p>
+<div class="info"><span class="tag">Proposta</span><h2 style="font-size:clamp(30px,3.6vw,42px);margin:10px 0 16px">Monte o briefing do seu evento</h2>
+<p>Responda 5 perguntas e receba um briefing com cronograma sugerido, pronto para enviar à nossa equipe.</p>
 <p><strong>Telefone:</strong> <a href="tel:+558530255551">(85) 3025-5551</a></p>
 <p><strong>Endereço:</strong> Av. Santos Dumont, 5335 - Manuel Dias Branco, Fortaleza - CE</p>
 <iframe src="https://www.google.com/maps?q=Sucesso+Eventos+Premium+Av.+Santos+Dumont+5335+Fortaleza&output=embed" loading="lazy" title="Mapa"></iframe></div>
-<form onsubmit="event.preventDefault();document.getElementById('ok').style.display='block'">
-<label>Tipo de evento<select><option>Evento corporativo</option><option>Congresso</option><option>Formatura / reencontro de turma</option><option>Festa social</option></select></label>
-<label>Data prevista<input type="date"></label>
-<label>Número de pessoas<input type="number" min="1" placeholder="Ex.: 300"></label>
-<label>Seu nome e empresa<input placeholder="Nome · Empresa ou turma"></label>
-<label>Telefone<input type="tel" placeholder="(85) 9 0000-0000"></label>
-<button class="btn b1" type="submit">Solicitar proposta para meu evento</button>
-<div id="ok">Recebido! Na versão final do site, este briefing chega direto para a equipe comercial.</div>
-</form>
+<div><div id="planner"></div></div>
 </div></section>
 
 <footer>Sucesso Eventos Premium · Fortaleza - CE<div class="demo">Proposta de site demonstrativa, não é o site oficial da empresa. Fotos e avaliações públicas do Google.</div></footer>
 <a class="call" href="tel:+558530255551">Ligar agora</a>
+<script src="../assets/planner.js"></script><script>Planner.mount('#planner',Object.assign({"empresa": "Sucesso Eventos Premium", "whatsapp": "", "telefone": "(85) 3025-5551", "cta": "Copiar briefing", "tituloResultado": "Briefing do seu evento", "theme": {"accent": "#C26A3D", "ink": "#14262a", "bg": "#EEF1F2", "card": "#fff", "line": "#dfe5e6", "muted": "#5b6b6e", "onAccent": "#fff", "fontH": "Montserrat,sans-serif"}, "steps": [{"id": "tipo", "q": "Que tipo de evento?", "type": "choice", "options": ["Corporativo", "Congresso científico", "Reencontro de formatura", "Festa social"], "resumo": "Tipo"}, {"id": "data", "q": "Data prevista", "type": "date", "noDate": "Ainda sem data", "resumo": "Data"}, {"id": "pub", "q": "Quantos participantes?", "type": "choice", "options": ["Até 100", "100 a 300", "300 a 1.000", "Mais de 1.000"], "resumo": "Participantes"}, {"id": "loc", "q": "Onde?", "type": "choice", "options": ["Fortaleza", "Litoral ou outra cidade do Ceará", "Ainda não definido"], "resumo": "Local"}, {"id": "serv", "q": "O que precisa da nossa equipe?", "hint": "Pode marcar mais de uma.", "type": "multi", "options": ["Planejamento", "Execução no dia", "Buffet e bebidas", "Marketing do evento"], "resumo": "Serviços"}]},{recomendar:(r,m)=>m===null?"Sem data ainda: podemos ajudar a escolher a melhor época e o local para o seu público.":m<0?"Confira a data informada.":m>=6?"Bom prazo para um evento bem estruturado: dá para reservar espaço, fornecedores e divulgação com antecedência.":"Prazo curto: ligue hoje para verificarmos disponibilidade de equipe e espaço.",marcos:[{m:6,t:"Definir formato, local e orçamento"},{m:4,t:"Fechar fornecedores e programação"},{m:2,t:"Divulgação e inscrições"},{m:1,t:"Ensaio técnico e logística final"}]}));</script>
 </body>
 </html>

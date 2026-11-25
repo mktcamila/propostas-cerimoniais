@@ -78,7 +78,7 @@ footer .demo{opacity:.7;font-size:11.5px;margin-top:6px}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="#">Diogo <span>Linhares</span></a><nav><a href="#diogo">O Diogo</a><a href="#como">Como trabalhamos</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#">Diogo <span>Linhares</span></a><nav><a href="#diogo">O Diogo</a><a href="#como">Como trabalhamos</a><a href="#planejar">Consultar data</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></nav></div></header>
 
 <section class="hero" style="padding:0">
 <div class="txt">
@@ -125,6 +125,10 @@ footer .demo{opacity:.7;font-size:11.5px;margin-top:6px}
 <div><h3>Festas de família</h3><p>Também para quem organiza a festa de um filho ou de uma filha.</p></div>
 </div></div></section>
 
+<section id="planejar"  style="style="background:#fff""><div class="wrap">
+<div style="text-align:center;max-width:680px;margin:0 auto 40px"><span class="kicker">Planeje em 1 minuto</span><h2 style="font-size:clamp(32px,4vw,48px);margin:12px 0 12px">Sua data está livre? Comece por aqui</h2><p style="opacity:.8">Responda 5 perguntas rápidas, veja um cronograma do que fazer até o casamento e mande tudo organizado para o Diogo.</p></div>
+<div id="planner"></div></div></section>
+<script src="../assets/planner.js"></script><script>Planner.mount('#planner',Object.assign({"empresa": "Diogo Linhares Eventos & Cerimonial", "whatsapp": "5585988259120", "saudacao": "Olá, Diogo!", "cta": "Consultar minha data no WhatsApp", "tituloResultado": "Seu casamento, no horário e nos detalhes", "theme": {"accent": "#C9A96E", "ink": "#2B2B2E", "bg": "#F7F4EF", "card": "#fff", "line": "#e4ddd2", "muted": "#6f6a64", "onAccent": "#2B2B2E", "fontH": "\"Playfair Display\",serif"}, "steps": [{"id": "data", "q": "Qual a data do casamento?", "type": "date", "resumo": "Data"}, {"id": "local", "q": "Onde vai ser?", "type": "choice", "options": ["Igreja + salão de festas", "Cerimônia e festa no mesmo espaço", "Praia ou ao ar livre", "Ainda não definimos"], "resumo": "Local"}, {"id": "conv", "q": "Quantos convidados, mais ou menos?", "type": "choice", "options": ["Até 80", "80 a 150", "150 a 250", "Mais de 250"], "resumo": "Convidados"}, {"id": "serv", "q": "Que tipo de ajuda vocês procuram?", "type": "choice", "options": ["Assessoria completa", "Só o cerimonial do dia", "Ainda não sei"], "resumo": "Serviço"}, {"id": "inv", "q": "Qual o investimento previsto para o casamento todo?", "hint": "Ajuda a indicar fornecedores que cabem no orçamento.", "type": "choice", "options": ["Até R$ 50 mil", "R$ 50 a 100 mil", "R$ 100 a 200 mil", "Acima de R$ 200 mil", "Prefiro conversar"], "resumo": "Investimento total"}]}));</script>
 <section id="depoimentos" class="quotes"><div class="wrap">
 <span class="kicker">Depoimentos reais do Google</span>
 <div class="qgrid">
